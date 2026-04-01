@@ -14,7 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $titre = mysqli_real_escape_string($conn, $_POST['titre']);
     $user_id = $_SESSION['user_id'];
     
-    // Calculer la date du prochain jour correspondant
     $date = date('Y-m-d', strtotime("next $jour"));
     $date_debut = date("Y-m-d H:i:s", strtotime("$date $heure"));
     $date_fin = date("Y-m-d H:i:s", strtotime("$date $heure +1 hour"));

@@ -9,7 +9,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
     
-    // Vérifier si l'email existe déjà
     $check = $conn->prepare("SELECT id FROM utilisateurs WHERE email = ?");
     $check->bind_param("s", $email);
     $check->execute();
@@ -22,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bind_param("sss", $nom, $email, $password);
         
         if ($stmt->execute()) {
-            $success = "✅ Compte créé avec succès ! Redirection vers la connexion...";
+            $success = "✅ Compte créé avec succès ! Redirection...";
             header("refresh:2;url=login.php");
         } else {
             $error = "❌ Erreur lors de l'inscription";

@@ -8,7 +8,6 @@ if (!isset($_SESSION['user_id'])) {
 
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
-// Récupérer la tâche
 $result = $conn->query("SELECT * FROM taches WHERE id = $id AND utilisateur_id = " . $_SESSION['user_id']);
 $task = $result->fetch_assoc();
 
