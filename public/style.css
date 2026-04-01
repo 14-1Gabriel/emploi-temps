@@ -1,0 +1,350 @@
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Container principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Cartes */
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    animation: fadeIn 0.5s ease;
+}
+
+.card h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+/* Formulaires */
+form input, form select, form button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+form input:focus, form select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+}
+
+form button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Tableaux */
+.table-container {
+    flex: 1;
+    min-width: 300px;
+    overflow-x: auto;
+}
+
+.activity-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.activity-table th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.activity-table td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.activity-table tr:hover {
+    background: #f9f9f9;
+}
+
+/* Grille semaine */
+.week-table {
+    width: 95%;
+    margin: 20px auto;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.week-table th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px;
+    text-align: center;
+}
+
+.week-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    vertical-align: top;
+    min-width: 100px;
+    height: 80px;
+}
+
+.time-slot {
+    background: #f5f5f5;
+    font-weight: bold;
+}
+
+.course-content {
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.course-content strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.add-course-link {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    color: #667eea;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.add-course-link:hover {
+    transform: scale(1.1);
+    display: inline-block;
+}
+
+/* Cours du jour */
+.today-course {
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+    color: white;
+    max-width: 400px;
+    margin: 15px auto;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.course-time {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.course-unite {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.course-title {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Boutons d'action */
+.actions {
+    white-space: nowrap;
+}
+
+.edit-btn, .delete-btn, .small-btn {
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0 3px;
+    display: inline-block;
+}
+
+.edit-btn {
+    color: #667eea;
+}
+
+.delete-btn {
+    color: #e74c3c;
+}
+
+.small-btn {
+    color: white;
+    font-size: 14px;
+}
+
+/* Déconnexion */
+.logout-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.logout-btn {
+    background: #e74c3c;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Pages d'authentification */
+.auth-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.auth-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.auth-card h2 {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.auth-card input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.auth-card button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.auth-card button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.auth-card a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.auth-card a:hover {
+    text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .week-table {
+        font-size: 12px;
+    }
+    
+    .week-table th, .week-table td {
+        padding: 5px;
+        min-width: 70px;
+    }
+    
+    .activity-table {
+        font-size: 12px;
+    }
+    
+    .activity-table th, .activity-table td {
+        padding: 8px;
+    }
+    
+    .auth-card {
+        padding: 30px 20px;
+    }
+    
+    header {
+        font-size: 18px;
+        padding: 15px;
+    }
+}
