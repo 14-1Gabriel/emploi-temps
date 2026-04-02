@@ -22,5 +22,5 @@ Application web de gestion d'emploi du temps avec rappels automatiques.
 
 ### 1. Cloner le repository
 ```bash
-git clone https://github.com/votre-username/emploi-temps.git
+git clone https://github.com/14-1gabriel/emploi-temps.git
 cd emploi-temps
